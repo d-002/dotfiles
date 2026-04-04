@@ -1,6 +1,8 @@
 import decman
 from decman.plugins import pacman, aur, systemd
 
+from common import HOME, USERNAME
+
 class UnclassifiedModule(decman.Module):
     def __init__(self):
         super().__init__('base')
@@ -70,3 +72,8 @@ class UnclassifiedModule(decman.Module):
             'manim',
             'pacseek',
         }
+
+decman.symlinks[f'{HOME}/.clang-format'] = \
+        f'{HOME}/dotfiles/unclassified/clang-format'
+decman.symlinks[f'{HOME}/.gitconfig'] = \
+        f'{HOME}/dotfiles/unclassified/gitconfig'

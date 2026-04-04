@@ -1,0 +1,25 @@
+[user]
+	email = minecraftenjoy@outlook.fr
+	name = d-002
+	signingkey = 2876E56E0D3B229247B4E5CB22208D07AB395ED6
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[safe]
+	directory = /mnt/win
+	directory = /mnt/win/Users/pc/Documents/Programming/Python/voronoi_test/fast-voronoi/
+	directory = /home/d_00/afs
+	directory = /home/d_00/afs/.confs
+	directory = /home/d_00/afs/my_remote
+	directory = /home/d_00/afs/.confs/config/nvim
+	directory = .
+	directory = /mnt/win/Users/pc/Desktop/cpu
+[init]
+	defaultBranch = master
+[commit]
+	gpgsign = true
+[core]
+	editor = vim

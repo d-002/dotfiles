@@ -12,10 +12,18 @@ class VimModule(decman.Module):
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:
         return {
+            'ex-vi-compat',
             'neovim',
             'tree-sitter-cli',
             'vim',
         }
 
+    @aur.packages
+    def aur_pkgs(self) -> set[str]:
+        return {
+            'vundle',
+        }
+
 decman.symlinks[f'{HOME}/.vimrc'] = f'{HOME}/dotfiles/vim/vimrc'
-decman.directories[f'{HOME}/.config/nvim'] = Directory(source_directory=f'{HOME}/dotfiles/nvim', owner=USERNAME)
+decman.directories[f'{HOME}/.config/nvim'] = Directory(
+        source_directory=f'{HOME}/dotfiles/nvim', owner=USERNAME)

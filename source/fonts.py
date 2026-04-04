@@ -1,5 +1,9 @@
 import decman
+from decman import Directory
+
 from decman.plugins import pacman, aur, systemd
+
+from common import HOME, USERNAME
 
 class FontsModule(decman.Module):
     def __init__(self):
@@ -18,3 +22,6 @@ class FontsModule(decman.Module):
             'ttf-ubuntu-font-family',
             'woff2-font-awesome',
         }
+
+decman.directories[f'{HOME}/.fonts'] = Directory(
+        source_directory=f'{HOME}/dotfiles/fonts', owner=USERNAME)

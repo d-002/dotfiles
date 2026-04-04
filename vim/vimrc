@@ -28,6 +28,7 @@ set incsearch
 set undofile
 set autowrite
 set autoread
+set termguicolors
 
 nnoremap <C-l> :clang-format -i %<Cr>
 
