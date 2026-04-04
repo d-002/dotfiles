@@ -12,5 +12,5 @@
 /dev/nvme0n1p5      	none      	swap      	defaults  	0 0
 
 # Windows disk
-# UUID=B25CCB645CCB21C9
-/mnt/win ntfs defaults 0 2
+# UUID=B25CCB645CCB21C9 LABEL=OS
+/dev/nvme0n1p3      	/mnt/win  	ntfs3     	rw,relatime,uid=0,gid=0,acl,iocharset=utf8,prealloc	0 0
