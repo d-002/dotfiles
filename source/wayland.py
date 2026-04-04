@@ -1,0 +1,29 @@
+import decman
+from decman.plugins import pacman, aur, systemd
+
+class WaylandModule(decman.Module):
+    def __init__(self):
+        super().__init__('base')
+
+    @pacman.packages
+    def pacman_pkgs(self) -> set[str]:
+        return {
+            'hyprpicker',
+            'keyd',
+            'mako',
+            'sway',
+            'swaybg',
+            'swayidle',
+            'swaylock',
+            'waybar',
+            'wayland',
+            'wayland-protocols',
+            'wev',
+            'wmenu',
+        }
+
+    @aur.packages
+    def aur_pkgs(self) -> set[str]:
+        return {
+            'grimshot-bin-sway',
+        }
