@@ -177,6 +177,7 @@ exec mako
 input type:keyboard {
     xkb_layout "fr"
     xkb_numlock enabled
+    xkb_options "caps:escape"
 }
 
 include /etc/sway/config.d/*
