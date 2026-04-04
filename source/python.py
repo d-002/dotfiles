@@ -34,7 +34,6 @@ class PythonModule(decman.Module):
     def aur_pkgs(self) -> set[str]:
         return {
             'python-latex-ocr-server',
-            'python-manim-slides',
             'python-moderngl-window',
             'python-py-cord-git',
             'python-pyglm',

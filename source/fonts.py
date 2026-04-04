@@ -9,6 +9,7 @@ class FontsModule(decman.Module):
     def pacman_pkgs(self) -> set[str]:
         return {
             'adobe-source-sans-fonts',
+            'gnu-free-fonts',
             'noto-fonts',
             'ttf-liberation',
             'ttf-opensans',
@@ -16,11 +17,4 @@ class FontsModule(decman.Module):
             'ttf-roboto-mono',
             'ttf-ubuntu-font-family',
             'woff2-font-awesome',
-        }
-
-    @aur.packages
-    def aur_pkgs(self) -> set[str]:
-        return {
-            'ttf-ms-win10-auto',
-            'ttf-ms-win10-auto-other',
         }

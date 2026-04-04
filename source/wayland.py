@@ -15,15 +15,10 @@ class WaylandModule(decman.Module):
             'swaybg',
             'swayidle',
             'swaylock',
+            'sway-contrib',
             'waybar',
             'wayland',
             'wayland-protocols',
             'wev',
             'wmenu',
-        }
-
-    @aur.packages
-    def aur_pkgs(self) -> set[str]:
-        return {
-            'grimshot-bin-sway',
         }

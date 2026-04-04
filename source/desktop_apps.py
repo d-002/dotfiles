@@ -32,5 +32,5 @@ class DesktopAppsModule(decman.Module):
         return {
             'brave-bin',
             'chromium-widevine',
-            #'vesktop',
+            'vesktop',
         }

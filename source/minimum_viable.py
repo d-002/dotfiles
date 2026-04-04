@@ -10,6 +10,7 @@ class MinimumViableModule(decman.Module):
         return {
             'base',
             'base-devel',
+            'devtools',
             'efibootmgr',
             'grub',
             'intel-ucode',
