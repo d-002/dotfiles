@@ -1,0 +1,101 @@
+#
+# ~/.zshrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+autoload -U colors && colors
+PS1="%(?..%? )%U%{$fg[blue]%}%2~%{$reset_color%}%u$ "
+
+# common aliases
+alias vim=nvim
+alias py=python3
+alias l="ls -Al"
+alias icat="kitten icat" # kitty
+alias autoremove="sudo pacman -Rcs \$(pacman -Qdtq) ; yay -Rcs \$(yay -Qdtq)"
+alias mnt="sudo mount -o uid=1000,gid=1000,umask=022"
+function mkcd() {
+    mkdir -p "$@"
+    cd "$1"
+}
+alias sd0="shutdown 0"
+
+EDITOR=vim
+
+# c EPITA
+function mk() {
+    gcc -o "$1" **.c -Wall -Wextra -Wvla -Werror -pedantic -std=c99 -fsanitize=address -g -lcriterion
+    if [ $? = 0 ]; then
+        file="$1"
+        shift
+        "./$file" "$@"
+        echo "Exit status: $?"
+    fi
+}
+
+# other utils
+eval "$(zoxide init zsh)"
+alias ls=eza
+alias cd=z
+alias rm="rm -I"
+
+alias fix-opera='sudo ~root/.scripts/fix-opera.sh' # Opera fix HTML5 media
+
+# git
+alias gs="git status"
+alias gd="git diff"
+alias ga="git add --all"
+alias gc="git commit -S -m "
+alias gac="ga ; gc"
+alias gp="git push"
+alias gf="git pull"
+alias gl="git reflog"
+alias gr="git reset --soft HEAD^"
+alias gg="git log --graph --oneline --decorate --all"
+
+export PATH="$HOME/.local/bin:$PATH"
+export PGDATA="$HOME/postgres_data"
+export PGHOST="/tmp"
+
+# zsh configuration
+zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
+fpath=(/usr/local/share/zsh-completions $fpath)
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+zstyle ':completion:*' menu select
+
+bindkey -v
+function zle-keymap-select {
+  if [[ $KEYMAP = vicmd ]]; then
+    echo -ne '\e[2 q'
+  else
+    echo -ne '\e[6 q'
+  fi
+}
+zle -N zle-keymap-select
+KEYTIMEOUT=1
+
+bindkey -M viins '^?' backward-delete-char
+bindkey '^[[Z' reverse-menu-complete
+bindkey -M viins '^R' history-incremental-search-backward
+bindkey -M vicmd '^R' history-incremental-search-backward
+
+setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+
+# don't add space after autocompletion, don't require Enter
+ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&|*'
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

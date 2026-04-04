@@ -1,0 +1,2 @@
+USERNAME='d_00'
+HOME=f'/home/{USERNAME}'

@@ -1,0 +1,69 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[bash] \W$ '
+
+# common aliases
+alias vim=nvim
+alias py=python3
+alias l="ls -Al"
+alias icat="kitten icat" # kitty
+alias autoremove="sudo pacman -Rcs \$(pacman -Qdtq) ; yay -Rcs \$(yay -Qdtq)"
+alias mnt="sudo mount -o uid=1000,gid=1000,umask=022"
+function mkcd() {
+    mkdir -p "$@"
+    cd "$1"
+}
+alias sd0="shutdown 0"
+
+EDITOR=vim
+
+# c EPITA
+function mk() {
+    gcc -o "$1" **.c -Wall -Wextra -Wvla -Werror -pedantic -std=c99 -fsanitize=address -g -lcriterion
+    if [ $? = 0 ]; then
+        file="$1"
+        shift
+        "./$file" "$@"
+        echo "Exit status: $?"
+    fi
+}
+
+color()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
+
+# other utils
+eval "$(zoxide init posix --hook prompt)"
+alias ls=eza
+alias cd=z
+alias rm="rm -I"
+
+alias fix-opera='sudo ~root/.scripts/fix-opera.sh' # Opera fix HTML5 media
+
+# git
+alias gs="git status"
+alias gd="git diff"
+alias ga="git add --all"
+alias gc="git commit -m "
+alias gac="ga ; gc"
+alias gp="git push"
+alias gf="git pull"
+alias gl="git reflog"
+alias gg="git log --graph --oneline --decorate --all"
+
+export PATH="$HOME/.local/bin:$PATH"
+export PGDATA="$HOME/postgres_data"
+export PGHOST="/tmp"
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
