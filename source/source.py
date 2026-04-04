@@ -4,6 +4,7 @@ from minimum_viable import MinimumViableModule
 from unclassified import UnclassifiedModule
 
 import shell
+import system_root
 
 from audio import AudioModule
 from c import CModule
