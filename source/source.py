@@ -3,6 +3,7 @@ import decman
 from minimum_viable import MinimumViableModule
 from unclassified import UnclassifiedModule
 
+import greeter
 import shell
 import system_root
 

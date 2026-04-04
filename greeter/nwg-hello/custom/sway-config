@@ -1,0 +1,10 @@
+bindsym Mod4+shift+e exec swaynag \
+	-t warning \
+	-m 'What do you want to do?' \
+	-b 'Poweroff' 'systemctl poweroff' \
+	-b 'Reboot' 'systemctl reboot'
+
+include /etc/sway/config-base
+include /etc/sway/config.d/*
+
+exec "nwg-hello -c /etc/nwg-hello/custom/nwg-hello.json -s /etc/nwg-hello/custom/nwg-hello.css; swaymsg exit"
