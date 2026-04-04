@@ -1,0 +1,11 @@
+cd "$HOME"
+read -p "Enter username: " username
+if [ -z "$username" ]; then
+    echo "Aborting: empty username."
+    exit 1
+fi
+
+mkdir -p afs
+kinit -f "$username@CRI.EPITA.FR" && \
+sshfs -o reconnect "$username@ssh.cri.epita.fr:/afs/cri.epita.fr/user/${username:0:1}/{username:0:2}/$username/u" afs && \
+cd afs

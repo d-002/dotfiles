@@ -12,6 +12,7 @@ class NetworkModule(decman.Module):
             'bluez',
             'bluez-deprecated-tools',
             'bluez-utils',
+            'inetutils',
             'networkmanager',
             'nss-mdns',
         }

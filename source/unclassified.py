@@ -77,3 +77,5 @@ decman.symlinks[f'{HOME}/.clang-format'] = \
         f'{HOME}/dotfiles/unclassified/clang-format'
 decman.symlinks[f'{HOME}/.gitconfig'] = \
         f'{HOME}/dotfiles/unclassified/gitconfig'
+decman.symlinks[f'{HOME}/.local/bin'] = \
+        f'{HOME}/dotfiles/unclassified/bin'

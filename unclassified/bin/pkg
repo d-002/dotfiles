@@ -1,0 +1,18 @@
+prev_dir="$(pwd)"
+
+read -p "Enter package name: " package
+if [ -z "$package" ]; then
+    echo "Aborting: empty package name."
+    exit 1
+fi
+
+cd ~/temp
+git clone "https://aur.archlinux.org/$package.git"
+cd $package
+
+makepkg -si
+
+cd ..
+rm -rf $package
+
+cd $prev_dir
