@@ -3,6 +3,8 @@ import decman
 from minimum_viable import MinimumViableModule
 from unclassified import UnclassifiedModule
 
+import shell
+
 from audio import AudioModule
 from c import CModule
 from desktop_apps import DesktopAppsModule
