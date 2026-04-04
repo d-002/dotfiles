@@ -1,0 +1,37 @@
+# general
+show-failed-attempts
+ignore-empty-password
+indicator-idle-visible
+
+# background
+image=~/Pictures/wallpapers/expedition_33/alicia_and_maelle_bnw_manor.png
+scaling=fill
+
+# normal
+inside-color=00000000
+bs-hl-color=ffffff30
+key-hl-color=00000080
+ring-color=00000030
+
+# verifying
+inside-ver-color=ff800050
+ring-ver-color=ff8000a0
+
+# wrong
+inside-wrong-color=ff000050
+ring-wrong-color=ff0000a0
+
+# clear
+inside-clear-color=ffffff30
+ring-clear-color=ffffffa0
+
+# text
+font=FiraCodeNerdFont
+font-size=14
+text-color=000000
+text-wrong-color=000000
+
+# layout
+show-keyboard-layout
+layout-bg-color=00000000
+layout-text-color=000000

@@ -1,6 +1,5 @@
 import decman
 from decman import Directory
-
 from decman.plugins import pacman, aur, systemd
 
 from common import HOME, USERNAME

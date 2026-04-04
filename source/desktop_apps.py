@@ -1,6 +1,8 @@
 import decman
 from decman.plugins import pacman, aur, systemd
 
+from common import HOME
+
 class DesktopAppsModule(decman.Module):
     def __init__(self):
         super().__init__('base')
@@ -40,3 +42,19 @@ class DesktopAppsModule(decman.Module):
         return {
             'greetd.service',
         }
+
+names = [
+    'fuzzel',
+    'i3',
+    'kitty',
+    'picom',
+    'polybar',
+    'rofi',
+    'sway',
+    'swaylock',
+    'vesktop',
+    'waybar',
+]
+for name in names:
+    decman.symlinks[f'{HOME}/.config/{name}'] = \
+            f'{HOME}/dotfiles/desktop_apps/{name}'
