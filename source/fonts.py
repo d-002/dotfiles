@@ -15,6 +15,7 @@ class FontsModule(decman.Module):
             'adobe-source-sans-fonts',
             'gnu-free-fonts',
             'noto-fonts',
+            'ttf-firacode-nerd',
             'ttf-liberation',
             'ttf-opensans',
             'ttf-roboto',
