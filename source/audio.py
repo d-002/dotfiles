@@ -21,3 +21,10 @@ class AudioModule(decman.Module):
             'vpl-gpu-rt',
             'wavpack',
         }
+
+    @systemd.units
+    def units(self) -> set[str]:
+        return {
+            'alsa-restore.service',
+            'alsa-state.service',
+        }

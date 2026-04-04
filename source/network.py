@@ -20,4 +20,5 @@ class NetworkModule(decman.Module):
     def units(self) -> set[str]:
         return {
             'NetworkManager.service',
+            'bluetooth.service',
         }

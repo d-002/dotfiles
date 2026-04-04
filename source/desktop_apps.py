@@ -34,3 +34,9 @@ class DesktopAppsModule(decman.Module):
             'chromium-widevine',
             'vesktop',
         }
+
+    @systemd.units
+    def units(self) -> set[str]:
+        return {
+            'greetd.service',
+        }

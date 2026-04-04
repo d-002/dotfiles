@@ -21,7 +21,7 @@ decman.execution_order = [
     "files",
     "pacman",
     "aur",
-    "flatpak",
+    #"flatpak",
     "systemd"
 ]
 
