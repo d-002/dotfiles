@@ -27,3 +27,4 @@ class TerminalAppsModule(decman.Module):
         }
 
 decman.symlinks[f'{HOME}/.config/btop'] = f'{HOME}/dotfiles/terminal_apps/btop'
+decman.symlinks[f'{HOME}/.config/htop'] = f'{HOME}/dotfiles/terminal_apps/htop'

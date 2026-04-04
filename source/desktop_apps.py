@@ -48,7 +48,6 @@ names = [
     'fuzzel',
     'i3',
     'kitty',
-    'picom',
     'polybar',
     'rofi',
     'sway',
@@ -59,6 +58,9 @@ for name in names:
     decman.symlinks[f'{HOME}/.config/{name}'] = \
             f'{HOME}/dotfiles/desktop_apps/{name}'
 
+decman.files[f'{HOME}/.config/picom.conf'] = \
+        File(source_file=f'{HOME}/dotfiles/desktop_apps/picom/picom.conf',
+             owner=USERNAME)
 decman.files[f'{HOME}/.config/vesktop/flags.conf'] = \
         File(source_file=f'{HOME}/dotfiles/desktop_apps/vesktop/flags.conf',
              owner=USERNAME)
