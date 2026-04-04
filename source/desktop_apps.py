@@ -1,7 +1,8 @@
 import decman
+from decman import File
 from decman.plugins import pacman, aur, systemd
 
-from common import HOME
+from common import HOME, USERNAME
 
 class DesktopAppsModule(decman.Module):
     def __init__(self):
@@ -52,9 +53,15 @@ names = [
     'rofi',
     'sway',
     'swaylock',
-    'vesktop',
     'waybar',
 ]
 for name in names:
     decman.symlinks[f'{HOME}/.config/{name}'] = \
             f'{HOME}/dotfiles/desktop_apps/{name}'
+
+decman.files[f'{HOME}/.config/vesktop/flags.conf'] = \
+        File(source_file=f'{HOME}/dotfiles/desktop_apps/vesktop/flags.conf',
+             owner=USERNAME)
+for name in ['config', 'config-base']:
+    decman.files[f'/etc/sway/{name}'] = \
+            File(source_file=f'{HOME}/dotfiles/desktop_apps/sway_root/{name}')

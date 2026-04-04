@@ -1,0 +1,38 @@
+### Variables
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Set main monitor
+output eDP-1 pos 0 0
+output eDP-1 mode 1920x1080@60Hz
+output HDMI-A-1 pos 1920 0
+workspace 1 output eDP-1
+workspace 2 output HDMI-A-1
+
+### Input configuration
+input type:touchpad {
+    tap enabled
+    scroll_factor .3
+    natural_scroll enabled
+    middle_emulation enabled
+
+    pointer_accel .3
+    accel_profile "flat"
+
+    dwt disabled
+}
+
+input type:pointer {
+    accel_profile "flat"
+}
+
+input type:keyboard {
+    xkb_layout "fr"
+    xkb_numlock enabled
+}
+
+# Hide mouse quickly
+seat seat0 hide_cursor 1000
