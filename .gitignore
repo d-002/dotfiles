@@ -3,3 +3,16 @@ lazy-lock.json
 
 # Python
 __pycache__
+
+# Safety first
+.gnupg
+.ssh
+.aws/credentials
+.config/gcloud
+.zsh_history
+.bash_history
+.sh_history
+*.key
+*.pem
+passwd
+shadow
