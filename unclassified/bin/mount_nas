@@ -1,3 +1,4 @@
+read -p "Enter subpath: " subpath
 read -p "Enter username: " username
 read -p "Enter password (will be visible sry): " password
 
@@ -6,4 +7,4 @@ if [ -z "$username" ]; then
     exit 1
 fi
 
-sudo mount --mkdir -t cifs "//192.168.1.2/$username" /mnt/nas -o "username=$username,password=$password,file_mode=0777,dir_mode=0777,uid=1000,gid=1001"
+sudo mount --mkdir -t cifs "//192.168.1.2/$subpath" /mnt/nas -o "username=$username,password=$password,file_mode=0777,dir_mode=0777,uid=1000,gid=1001"
