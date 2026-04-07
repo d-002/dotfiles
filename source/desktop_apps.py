@@ -28,6 +28,7 @@ class DesktopAppsModule(decman.Module):
             'rofi',
             'thunderbird',
             'zathura',
+            'zathura-pdf-mupdf',
         }
 
     @aur.packages
