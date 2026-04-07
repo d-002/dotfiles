@@ -1,11 +1,11 @@
 import decman
 from decman.plugins import pacman, aur, systemd
 
-from common import HOME, USERNAME
+from common import HOME
 
 class UnclassifiedModule(decman.Module):
     def __init__(self):
-        super().__init__('base')
+        super().__init__('unclassified')
 
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:

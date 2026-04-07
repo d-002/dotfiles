@@ -3,7 +3,7 @@ from decman.plugins import pacman, aur, systemd
 
 class WaylandModule(decman.Module):
     def __init__(self):
-        super().__init__('base')
+        super().__init__('wayland')
 
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:

@@ -5,7 +5,7 @@ from common import HOME
 
 class TerminalAppsModule(decman.Module):
     def __init__(self):
-        super().__init__('base')
+        super().__init__('terminal_apps')
 
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:

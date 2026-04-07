@@ -6,7 +6,7 @@ from common import HOME, USERNAME
 
 class DesktopAppsModule(decman.Module):
     def __init__(self):
-        super().__init__('base')
+        super().__init__('desktop_apps')
 
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:

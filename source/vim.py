@@ -6,7 +6,7 @@ from common import HOME, USERNAME
 
 class VimModule(decman.Module):
     def __init__(self):
-        super().__init__('base')
+        super().__init__('vim')
 
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:

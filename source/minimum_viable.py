@@ -3,7 +3,7 @@ from decman.plugins import pacman, aur, systemd
 
 class MinimumViableModule(decman.Module):
     def __init__(self):
-        super().__init__('base')
+        super().__init__('minimum_viable')
 
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:

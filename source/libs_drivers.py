@@ -3,7 +3,7 @@ from decman.plugins import pacman, aur, systemd
 
 class LibsDriversModule(decman.Module):
     def __init__(self):
-        super().__init__('base')
+        super().__init__('libs_drivers')
 
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:

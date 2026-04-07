@@ -1,6 +1,4 @@
 import decman
-from decman import File
-import decman
 
 from common import HOME
 

@@ -12,6 +12,7 @@ from c import CModule
 from desktop_apps import DesktopAppsModule
 from fonts import FontsModule
 from libs_drivers import LibsDriversModule
+from locale_ import LocaleModule
 from network import NetworkModule
 from python import PythonModule
 from remote_fs import RemoteFSModule
@@ -38,6 +39,7 @@ decman.modules += [
     DesktopAppsModule(),
     FontsModule(),
     LibsDriversModule(),
+    LocaleModule(),
     NetworkModule(),
     PythonModule(),
     RemoteFSModule(),
