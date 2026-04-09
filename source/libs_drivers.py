@@ -16,6 +16,10 @@ class LibsDriversModule(decman.Module):
             'libmpeg2',
             'libva-intel-driver',
             'qt6-multimedia',
+            'qt6-wayland',
+            'xdg-desktop-portal',
+            'xdg-desktop-portal-gtk',
+            'xdg-desktop-portal-wlr',
         }
 
     @aur.packages
