@@ -28,3 +28,12 @@ class AudioModule(decman.Module):
             'alsa-restore.service',
             'alsa-state.service',
         }
+
+    @systemd.user_units
+    def user_units(self) -> dict[str, set[str]]:
+        return {
+            'd_00': {
+                'pipewire.service',
+                'wireplumber.service',
+            },
+        }
