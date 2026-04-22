@@ -1,5 +1,4 @@
 return {
-    --[[
     {
         "MeanderingProgrammer/render-markdown.nvim",
         after = { "nvim-treesitter" },
@@ -7,5 +6,4 @@ return {
             require("render-markdown").setup({ yaml = { enabled = false } })
         end,
     }
-    ]]--
 }
