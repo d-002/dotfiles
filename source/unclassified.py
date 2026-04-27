@@ -1,5 +1,5 @@
 import decman
-from decman.plugins import pacman, aur, systemd
+from decman.plugins import pacman, aur
 
 from common import HOME
 
@@ -23,6 +23,7 @@ class UnclassifiedModule(decman.Module):
             'man-db',
             'man-pages',
             'npm',
+            'pacman-contrib',
             'perl-image-exiftool',
             'php',
             'php-sqlite',
