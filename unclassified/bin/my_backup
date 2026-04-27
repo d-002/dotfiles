@@ -1,1 +1,2 @@
-rsync -av --delete --progress ~/Documents/Programming/ /mnt/nas/Sauvegardes/PC/Documents/Programming --exclude **/.git
+rsync -av --delete --progress "$HOME/Documents/Programming/" "/mnt/nas/Sauvegardes/PC/Documents/Programming" --exclude **/.git
+rsync -av --delete --progress "$HOME/testing/" "/mnt/nas/Sauvegardes/PC/testing"
