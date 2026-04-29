@@ -25,10 +25,7 @@ class PythonModule(decman.Module):
             'python-pyqt6',
             'python-pytest-cov',
             'python-python-multipart',
-            'python-pytorch',
             'python-soundfile',
-            'python-tensorflow',
-            'python-torchvision',
             'python-typing_extensions',
         }
 
@@ -40,7 +37,6 @@ class PythonModule(decman.Module):
             'python-py-cord-git',
             'python-pyglm',
             'python-pynput',
-            'python-sentence-transformers',
             'python-sounddevice',
         }
 
