@@ -1,3 +1,5 @@
+#!/bin/sh
+
 read -p "Enter subpath: " subpath
 read -p "Enter username: " username
 read -p "Enter password (will be visible sry): " password

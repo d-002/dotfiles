@@ -1,3 +1,5 @@
+#!/bin/sh
+
 DRI_PRIME=1 Xephyr :1 -screen 1920x1080 &
 sleep 1
 DISPLAY=:1 openbox &

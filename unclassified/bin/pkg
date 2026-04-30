@@ -1,3 +1,5 @@
+#!/bin/sh
+
 prev_dir="$(pwd)"
 
 read -p "Enter package name: " package
