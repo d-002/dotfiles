@@ -15,6 +15,7 @@ class UnclassifiedModule(decman.Module):
             'bun',
             'clinfo',
             'docker',
+            'docker-compose',
             'eza',
             'fd',
             'git',
@@ -77,7 +78,9 @@ class UnclassifiedModule(decman.Module):
     @systemd.units
     def units(self) -> set[str]:
         return {
+            'containerd.service',
             'docker.service',
+            'docker.socket',
         }
 
 decman.symlinks[f'{HOME}/.clang-format'] = \
