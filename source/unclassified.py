@@ -1,5 +1,5 @@
 import decman
-from decman.plugins import pacman, aur
+from decman.plugins import pacman, aur, systemd
 
 from common import HOME
 
@@ -72,6 +72,12 @@ class UnclassifiedModule(decman.Module):
         return {
             'manim',
             'pacseek',
+        }
+
+    @systemd.units
+    def units(self) -> set[str]:
+        return {
+            'docker.service',
         }
 
 decman.symlinks[f'{HOME}/.clang-format'] = \
