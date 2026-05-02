@@ -18,6 +18,7 @@ class GamingModule(decman.Module):
     def aur_pkgs(self) -> set[str]:
         return {
             'asusctl',
+            'multimc-bin',
             'rog-control-center',
             'supergfxctl',
             'protonup-qt',
