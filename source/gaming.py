@@ -10,8 +10,11 @@ class GamingModule(decman.Module):
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:
         return {
+            'gamescope',
+            'mangohud',
             'steam',
             'gamemode',
+            'wine',
         }
 
     @aur.packages

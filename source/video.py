@@ -10,6 +10,7 @@ class VideoModule(decman.Module):
         return {
             # Intel iGPU
             'lib32-mesa',
+            'lib32-vulkan-icd-loader',
             'lib32-vulkan-intel',
             'mesa',
             'vulkan-intel',
