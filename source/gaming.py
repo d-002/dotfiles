@@ -1,7 +1,7 @@
 import os
 import decman
+import subprocess
 from decman.plugins import pacman, aur, systemd
-from subprocess import run
 
 class GamingModule(decman.Module):
     def __init__(self):
@@ -23,7 +23,7 @@ class GamingModule(decman.Module):
             'asusctl',
             'multimc-bin',
             'rog-control-center',
-            'supergfxctl',
+            'envycontrol',
             'protonup-qt',
         }
 
@@ -32,7 +32,6 @@ class GamingModule(decman.Module):
         return {
             'nvidia-persistenced',
             'asusd',
-            'supergfxd',
         }
 
     def before_update(self, store) -> None:
@@ -46,5 +45,11 @@ class GamingModule(decman.Module):
         print('GamingModule: custom after hook')
 
         print(' - Setting mode to hybrid...')
-        cp = run(['supergfxctl', '-m', 'Hybrid'])
-        assert cp.returncode == 0
+        current_mode = subprocess.check_output(
+            ['envycontrol', '-q'], text=True).strip()
+        target_mode = 'hybrid'
+        if current_mode == target_mode:
+            print('Mode already set.')
+        else:
+            cp = subprocess.run(['envycontrol', '-s', target_mode])
+            assert cp.returncode == 0
