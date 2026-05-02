@@ -5,6 +5,7 @@
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
+    "interval": 10,
     // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
@@ -28,7 +29,6 @@
             "disk",
             "temperature",
         ],
-        "interval": 10,
     },
     "tray": {
         // "icon-size": 21,
@@ -68,7 +68,7 @@
             "warning": 40,
             "critical": 15
         },
-        "interval": 60,
+        "interval": 30,
         "format": "{capacity}% ({time}) {icon}",
         "format-charging": "{capacity}%  ",
         "format-plugged": "{capacity}%  ",
