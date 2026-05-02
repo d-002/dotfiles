@@ -1,5 +1,5 @@
 import decman
-from decman.plugins import pacman, aur, systemd
+from decman.plugins import pacman
 
 class VideoModule(decman.Module):
     def __init__(self):
@@ -8,17 +8,21 @@ class VideoModule(decman.Module):
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:
         return {
-            'mesa-utils',
+            # Intel iGPU
+            'lib32-mesa',
+            'lib32-vulkan-intel',
+            'mesa',
+            'vulkan-intel',
+
+            # Nvidia dGPU
+            'lib32-nvidia-utils',
             'nvidia-open',
             'nvidia-prime',
             'nvidia-settings',
             'nvidia-utils',
+
+            # Utilities, tools
             'opencl-mesa',
             'opencl-nvidia',
-            'vulkan-intel',
-            'vulkan-mesa-layers',
-            'vulkan-nouveau',
             'vulkan-tools',
-            'xf86-video-intel',
-            'xf86-video-vesa',
         }

@@ -11,6 +11,7 @@ from audio import AudioModule
 from c import CModule
 from desktop_apps import DesktopAppsModule
 from fonts import FontsModule
+from gaming import GamingModule
 from libs_drivers import LibsDriversModule
 from locale_ import LocaleModule
 from network import NetworkModule
@@ -38,6 +39,7 @@ decman.modules += [
     CModule(),
     DesktopAppsModule(),
     FontsModule(),
+    GamingModule(),
     LibsDriversModule(),
     LocaleModule(),
     NetworkModule(),
