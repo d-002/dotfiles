@@ -1,5 +1,8 @@
 import decman
-from decman.plugins import pacman, aur, systemd
+from decman import File
+from decman.plugins import pacman, aur
+
+from common import HOME
 
 class MinimumViableModule(decman.Module):
     def __init__(self):
@@ -28,3 +31,6 @@ class MinimumViableModule(decman.Module):
             'decman',
             'yay',
         }
+
+decman.files[f'/etc/pacman.conf'] = File(
+        source_file=f'{HOME}/dotfiles/pacman/pacman.conf')
