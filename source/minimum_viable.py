@@ -34,3 +34,5 @@ class MinimumViableModule(decman.Module):
 
 decman.files[f'/etc/pacman.conf'] = File(
         source_file=f'{HOME}/dotfiles/pacman/pacman.conf')
+decman.files[f'/etc/makepkg.conf'] = File(
+        source_file=f'{HOME}/dotfiles/pacman/makepkg.conf')
