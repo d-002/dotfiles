@@ -14,7 +14,6 @@ alias vim=nvim
 alias py=python3
 alias l="ls -Al"
 alias icat="kitten icat" # kitty
-alias autoremove="sudo pacman -Rcs \$(pacman -Qdtq) ; yay -Rcs \$(yay -Qdtq)"
 alias mnt="sudo mount -o uid=1000,gid=1000,umask=022"
 function mkcd() {
     mkdir -p "$@"
