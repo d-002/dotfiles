@@ -46,6 +46,7 @@ class DesktopAppsModule(decman.Module):
         }
 
 names = [
+    'brave-flags.conf',
     'fuzzel',
     'i3',
     'kitty',
