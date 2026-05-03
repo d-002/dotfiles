@@ -1,8 +1,5 @@
 include /etc/sway/config-base
 
-### XWayland
-Xwayland enable
-
 ### Variables
 set $dmenu rofi -show drun
 set $term kitty

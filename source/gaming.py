@@ -10,6 +10,7 @@ class GamingModule(decman.Module):
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:
         return {
+            'plasma-x11-session',
             'gamescope',
             'mangohud',
             'steam',

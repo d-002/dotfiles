@@ -19,5 +19,4 @@ class X11Module(decman.Module):
             'xorg-xinit',
             'xsel',
             'xterm',
-            'xorg-xwayland',
         }
