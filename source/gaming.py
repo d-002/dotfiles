@@ -10,23 +10,36 @@ class GamingModule(decman.Module):
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:
         return {
-            'jdk21-openjdk',
-            'plasma-x11-session',
+            # general
             'gamescope',
             'mangohud',
-            'steam',
             'gamemode',
             'wine',
+
+            # x11 to avoid xwayland input lag
+            'plasma-desktop',
+            'plasma-x11-session',
+
+            # steam
+            'steam',
+
+            # Minecraft
+            'jdk21-openjdk',
         }
 
     @aur.packages
     def aur_pkgs(self) -> set[str]:
         return {
+            # general
             'asusctl',
             'multimc-bin',
             'rog-control-center',
             'envycontrol',
             'protonup-qt',
+
+            # Celeste
+            'lua-lsqlite3', # broken, need to `makepkg -si --skipinteg`
+            'olympus',
         }
 
     @systemd.units

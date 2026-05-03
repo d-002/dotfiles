@@ -14,6 +14,7 @@ class X11Module(decman.Module):
             'openbox',
             'picom',
             'polybar',
+            'scrot',
             'xdg-utils',
             'xorg-server',
             'xorg-xinit',
