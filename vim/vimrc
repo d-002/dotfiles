@@ -36,8 +36,3 @@ colorscheme onedark
 
 packadd termdebug
 let g:termdebug_wide=1
-
-function! PlaySound()
-  silent! exec '!(cvlc ~/afs/fahhh.mp3 1>/dev/null 2>/dev/null; sleep 1; pkill vlc) &'
-endfunction
-autocmd CursorMovedI * call PlaySound()
