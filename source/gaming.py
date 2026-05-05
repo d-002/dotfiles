@@ -25,6 +25,9 @@ class GamingModule(decman.Module):
 
             # Minecraft
             'jdk21-openjdk',
+
+            # Celeste
+            'dotnet-sdk',
         }
 
     @aur.packages
@@ -40,6 +43,7 @@ class GamingModule(decman.Module):
             # Celeste
             'lua-lsqlite3', # broken, need to `makepkg -si --skipinteg`
             'olympus',
+            'rider',
         }
 
     @systemd.units
