@@ -1,7 +1,7 @@
 [user]
 	email = mailofd00@gmail.com
 	name = d-002
-	signingkey = 2876E56E0D3B229247B4E5CB22208D07AB395ED6
+	signingkey = 3E6EEF00F3DA7F9BB716EFAFF323198FA134D7CF
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
@@ -16,3 +16,5 @@
 	gpgsign = true
 [core]
 	editor = vim
+[push]
+	autoSetupRemote = true
