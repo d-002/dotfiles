@@ -18,7 +18,7 @@ return {
             "pyright", -- Python
             -- "phpactor", -- PHP
             "texlab", -- LaTeX
-            "eslint-lsp", -- Typescript
+            "eslint", -- Typescript
         }
 
         require("mason-lspconfig").setup({
