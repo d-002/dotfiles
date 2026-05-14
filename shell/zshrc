@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# keyboard layour for x11
+[ -n "$DISPLAY" ] && setxkbmap fr -option caps:escape
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 autoload -U colors && colors
