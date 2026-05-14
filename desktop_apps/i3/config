@@ -116,7 +116,7 @@ bindsym $mod+r mode "resize"
 ### Utilities
 
 bindsym $mod+Ctrl+l exec "i3lock -i ~/Pictures/wallpapers/expedition_33/alicia_and_maelle_bnw_manor.png"
-bindsym $mod+Shift+s exec "scrot -s"
+bindsym $mod+Shift+s exec "maim -s | xclip -selection clipboard -t image/png"
 
 ### Keyboard keys for hardware settings
 
