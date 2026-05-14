@@ -8,6 +8,7 @@ class X11Module(decman.Module):
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:
         return {
+            'arandr',
             'feh',
             'i3-wm',
             'i3lock',
@@ -17,6 +18,7 @@ class X11Module(decman.Module):
             'scrot',
             'xdg-utils',
             'xorg-server',
+            'xorg-xev',
             'xorg-xinit',
             'xsel',
             'xterm',

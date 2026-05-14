@@ -17,7 +17,6 @@ class GamingModule(decman.Module):
             'wine',
 
             # x11 to avoid xwayland input lag
-            'kscreen',
             'plasma-desktop',
             'plasma-x11-session',
 
