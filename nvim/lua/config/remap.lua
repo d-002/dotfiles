@@ -38,3 +38,6 @@ vim.keymap.set("i", "<C-c>", "<Escape>")
 
 -- clang-format
 vim.keymap.set("n", "<leader>c", ":!clang-format -i %<cr><cr>")
+
+-- tabs
+vim.keymap.set("n", "<leader>t", vim.cmd.tabnew)
