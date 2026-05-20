@@ -5,8 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# keyboard layour for x11
-[ "$XDG_SESSION_TYPE" = x11 ] && setxkbmap fr -option caps:escape
+# keyboard layout for x11
+[ "$XDG_SESSION_TYPE" != wayland ] && setxkbmap fr -option caps:escape
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
