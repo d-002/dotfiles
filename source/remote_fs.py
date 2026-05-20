@@ -11,6 +11,7 @@ class RemoteFSModule(decman.Module):
             'cifs-utils',
             'mtpfs',
             'sshfs',
+            'openssh',
         }
 
     @aur.packages
@@ -18,4 +19,10 @@ class RemoteFSModule(decman.Module):
         return {
             'httpfs2-2gbplus',
             'jmtpfs',
+        }
+
+    @systemd.units
+    def units(self) -> set[str]:
+        return {
+            'sshd.service',
         }
