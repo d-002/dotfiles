@@ -9,6 +9,7 @@ class PythonModule(decman.Module):
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:
         return {
+            'jupyter-notebook',
             'python-certifi',
             'python-colorama',
             'python-cvxpy',
@@ -27,6 +28,7 @@ class PythonModule(decman.Module):
             'python-python-multipart',
             'python-soundfile',
             'python-typing_extensions',
+            'uvicorn',
         }
 
     @aur.packages

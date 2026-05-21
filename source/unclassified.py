@@ -10,7 +10,7 @@ class UnclassifiedModule(decman.Module):
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:
         s = {
-            'biber',
+            'bc',
             'brightnessctl',
             'bun',
             'clinfo',
@@ -19,7 +19,6 @@ class UnclassifiedModule(decman.Module):
             'eza',
             'fd',
             'git',
-            'jupyter-notebook',
             'luarocks',
             'man-db',
             'man-pages',
@@ -33,37 +32,10 @@ class UnclassifiedModule(decman.Module):
             'pre-commit',
             'rsync',
             'rust',
-            'typst',
             'unzip',
-            'uvicorn',
             'zig',
             'zip',
             'zsh',
-        }
-
-        s |= {
-            'texlive-basic',
-            'texlive-bibtexextra',
-            'texlive-binextra',
-            'texlive-context',
-            'texlive-fontsextra',
-            'texlive-fontsrecommended',
-            'texlive-fontutils',
-            'texlive-formatsextra',
-            'texlive-games',
-            'texlive-humanities',
-            'texlive-latex',
-            'texlive-latexextra',
-            'texlive-latexrecommended',
-            'texlive-luatex',
-            'texlive-mathscience',
-            'texlive-metapost',
-            'texlive-music',
-            'texlive-pictures',
-            'texlive-plaingeneric',
-            'texlive-pstricks',
-            'texlive-publishers',
-            'texlive-xetex',
         }
 
         return s
