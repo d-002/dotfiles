@@ -1,0 +1,6 @@
+[package]
+name = "notes_theme"
+version = "1.0.0"
+entrypoint = "lib.typ"
+authord = ["d_00"]
+description = "Factorized theme template for taking class notes"

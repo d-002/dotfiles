@@ -13,6 +13,7 @@ from desktop_apps import DesktopAppsModule
 from davinci_resolve import DaVinciResolveModule
 from fonts import FontsModule
 from gaming import GamingModule
+from latex_typst import LatexTypstModule
 from libs_drivers import LibsDriversModule
 from locale_ import LocaleModule
 from network import NetworkModule
@@ -42,6 +43,7 @@ decman.modules += [
     DesktopAppsModule(),
     FontsModule(),
     GamingModule(),
+    LatexTypstModule(),
     LibsDriversModule(),
     LocaleModule(),
     NetworkModule(),
