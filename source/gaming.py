@@ -44,6 +44,9 @@ class GamingModule(decman.Module):
             'lua-lsqlite3', # broken, need to `makepkg -si --skipinteg`
             'olympus',
             'rider',
+
+            # TETR.IO
+            'tetrio-desktop',
         }
 
     @systemd.units
