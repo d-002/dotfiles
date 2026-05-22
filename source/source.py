@@ -18,6 +18,7 @@ from libs_drivers import LibsDriversModule
 from locale_ import LocaleModule
 from network import NetworkModule
 from python import PythonModule
+from programming import ProgrammingModule
 from remote_fs import RemoteFSModule
 from terminal_apps import TerminalAppsModule
 from video import VideoModule
@@ -48,6 +49,7 @@ decman.modules += [
     LocaleModule(),
     NetworkModule(),
     PythonModule(),
+    ProgrammingModule(),
     RemoteFSModule(),
     TerminalAppsModule(),
     VideoModule(),

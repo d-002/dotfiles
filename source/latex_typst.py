@@ -1,11 +1,11 @@
 import decman
-from decman.plugins import pacman, aur, systemd
+from decman.plugins import pacman
 
 from common import HOME
 
 class LatexTypstModule(decman.Module):
     def __init__(self):
-        super().__init__('unclassified')
+        super().__init__('latex_typst')
 
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:
