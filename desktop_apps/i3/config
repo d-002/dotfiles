@@ -131,10 +131,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 
 ### Status Bar
 
-bar {
-    mode invisible
-    status_command polybar
-}
+exec --no-startup-id "~/.config/polybar/launch.sh"
 
 client.focused #ffffff60 #ffffff50 #ffffff
 client.focused_inactive #ffffff40 #ffffff30 #ffffffc0
