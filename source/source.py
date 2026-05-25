@@ -40,7 +40,7 @@ decman.modules += [
 
     AudioModule(),
     CModule(),
-    DaVinciResolveModule(),
+    #DaVinciResolveModule(),
     DesktopAppsModule(),
     FontsModule(),
     GamingModule(),

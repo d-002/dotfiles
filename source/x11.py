@@ -18,6 +18,7 @@ class X11Module(decman.Module):
             'polybar',
             'xdg-utils',
             'xorg-server',
+            'xclip',
             'xorg-xev',
             'xorg-xinit',
             'xsel',
