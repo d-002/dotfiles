@@ -44,6 +44,7 @@ eval "$(zoxide init zsh)"
 alias ls=eza
 alias cd=z
 alias rm="rm -I"
+alias 223="echo '   223'"
 
 alias fix-opera='sudo ~root/.scripts/fix-opera.sh' # Opera fix HTML5 media
 
