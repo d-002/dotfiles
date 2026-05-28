@@ -12,6 +12,10 @@
 }
 #set par(justify: true)
 #show strong: set text(fill: color_primary)
+#show link: it => {
+  set text(fill: color_secondary)
+  underline(it)
+}
 
 #body
 ]}
