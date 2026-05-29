@@ -26,6 +26,7 @@ class PythonModule(decman.Module):
             'python-pyqt6',
             'python-pytest-cov',
             'python-python-multipart',
+            'python-scikit-learn',
             'python-soundfile',
             'python-typing_extensions',
             'uvicorn',
