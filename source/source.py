@@ -57,3 +57,17 @@ decman.modules += [
     WaylandModule(),
     X11Module(),
 ]
+
+if __name__ == '__main__':
+    import subprocess
+
+    print('Manual config override: installing all aur packages with yay')
+
+    packages = set()
+    for module in decman.modules:
+        try:
+            packages = packages.union(module.aur_pkgs())
+        except AttributeError:
+            pass
+
+    subprocess.run(["yay", "-Syu", *packages])
