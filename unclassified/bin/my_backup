@@ -2,3 +2,10 @@
 
 rsync -av --delete --progress "$HOME/Documents/Programming/" "/mnt/nas/Sauvegardes/PC/Documents/Programming" --exclude **/.git
 rsync -av --delete --progress "$HOME/testing/" "/mnt/nas/Sauvegardes/PC/testing"
+
+cd /mnt/nas/Sauvegardes/GitHub
+for dir in *; do
+    cd "$dir"
+    git pull
+    cd - >/dev/null
+done
