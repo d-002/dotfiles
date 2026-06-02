@@ -47,6 +47,9 @@ class GamingModule(decman.Module):
 
             # TETR.IO
             'tetrio-desktop',
+
+            # Subnautica
+            'nitrox',
         }
 
     @systemd.units
