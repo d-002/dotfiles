@@ -34,7 +34,6 @@ class UnclassifiedModule(decman.Module):
     @aur.packages
     def aur_pkgs(self) -> set[str]:
         return {
-            'manim',
             'pacseek',
         }
 
