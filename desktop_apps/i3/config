@@ -11,7 +11,7 @@ set $up K
 set $right L
 
 ### Output configuration
-exec --no-startup-id feh --no-fehbg --bg-scale "$HOME/Pictures/wallpapers/unsplash/dark_snowy_mountain.jpg"
+exec --no-startup-id feh --no-fehbg --bg-scale "$HOME/Pictures/wallpaper.jpg"
 exec xrandr --output HDMI-4 --mode 1920x1080 --rate 100
 
 ### Key bindings

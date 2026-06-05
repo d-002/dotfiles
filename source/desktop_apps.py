@@ -64,10 +64,14 @@ decman.symlinks[f'{HOME}/.config/picom.conf'] = \
         source_file=f'{HOME}/dotfiles/desktop_apps/picom/picom.conf'
 decman.symlinks[f'{HOME}/.config/vesktop/flags.conf'] = \
         source_file=f'{HOME}/dotfiles/desktop_apps/vesktop/flags.conf'
-# needs to be files with root permissions and not symlinks for greeter
+decman.symlinks[f'{HOME}/Pictures/wallpaper.jpg'] = \
+        f'{HOME}/dotfiles/desktop_apps/wallpaper.jpg'
+
+# these need to be files with root permissions and not symlinks for greeter
 for name in ['config', 'config-base']:
     decman.files[f'/etc/sway/{name}'] = File(
             source_file=f'{HOME}/dotfiles/desktop_apps/sway_root/{name}')
+
 decman.symlinks['/etc/chromium/default'] = \
         f'{HOME}/dotfiles/desktop_apps/chromium_root/default'
 decman.symlinks['/etc/opera/default.pacsave'] = \

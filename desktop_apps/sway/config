@@ -5,7 +5,7 @@ set $dmenu rofi -show drun
 set $term kitty
 
 ### Output configuration
-output * bg "~/Pictures/wallpapers/unsplash/dark_snowy_mountain.jpg" fill
+output * bg "~/Pictures/wallpaper.jpg" fill
 
 ### Idle configuration
 exec swayidle -w \
