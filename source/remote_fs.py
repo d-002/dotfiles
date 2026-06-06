@@ -21,8 +21,10 @@ class RemoteFSModule(decman.Module):
             'jmtpfs',
         }
 
+    """
     @systemd.units
     def units(self) -> set[str]:
         return {
             'sshd.service',
         }
+    """
