@@ -29,6 +29,7 @@ class PythonModule(decman.Module):
             'python-scikit-learn',
             'python-soundfile',
             'python-typing_extensions',
+            'ruff',
             'uvicorn',
         }
 
