@@ -148,6 +148,9 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ t
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
+# Fix nonfunctional touchpad toggle
+bindsym XF86TouchpadToggle input type:touchpad events toggle enabled disabled
+
 # Powertoys-like utilities
 bindsym $mod+Shift+c exec hyprpicker
 bindsym Print exec grimshot copy screen
