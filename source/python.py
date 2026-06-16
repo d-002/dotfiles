@@ -23,6 +23,7 @@ class PythonModule(decman.Module):
             'python-pydub',
             'python-pygame',
             'python-pylatexenc',
+            'python-pynacl',
             'python-pyqt6',
             'python-pytest-cov',
             'python-python-multipart',
