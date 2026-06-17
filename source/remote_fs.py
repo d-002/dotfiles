@@ -10,7 +10,7 @@ class RemoteFSModule(decman.Module):
         return {
             'cifs-utils',
             'mtpfs',
-            'nginx'
+            'nginx',
             'sshfs',
             'openssh',
         }

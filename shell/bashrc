@@ -60,8 +60,6 @@ alias gl="git reflog"
 alias gg="git log --graph --oneline --decorate --all"
 
 export PATH="$HOME/.local/bin:$PATH"
-export PGDATA="$HOME/postgres_data"
-export PGHOST="/tmp"
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"

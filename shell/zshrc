@@ -61,8 +61,6 @@ alias gr="git reset --soft HEAD^"
 alias gg="git log --graph --oneline --decorate --all"
 
 export PATH="$HOME/.local/bin:$PATH"
-export PGDATA="$HOME/postgres_data"
-export PGHOST="/tmp"
 
 # zsh configuration
 zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
