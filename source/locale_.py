@@ -1,7 +1,8 @@
 import decman
-from decman.plugins import pacman, aur, systemd
+from decman.plugins import systemd
 
 from common import HOME
+
 
 class LocaleModule(decman.Module):
     def __init__(self):
@@ -12,6 +13,7 @@ class LocaleModule(decman.Module):
         return {
             'systemd-timesyncd.service',
         }
+
 
 decman.symlinks['/etc/locale.conf'] = f'{HOME}/dotfiles/locale/locale.conf'
 decman.symlinks['/etc/locale.gen'] = f'{HOME}/dotfiles/locale/locale.gen'

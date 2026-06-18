@@ -1,2 +1,2 @@
-USERNAME='d_00'
-HOME=f'/home/{USERNAME}'
+USERNAME = 'd_00'
+HOME = f'/home/{USERNAME}'

@@ -1,8 +1,9 @@
 import decman
 from decman import Directory
-from decman.plugins import pacman, aur, systemd
+from decman.plugins import pacman, aur
 
 from common import HOME, USERNAME
+
 
 class VimModule(decman.Module):
     def __init__(self):
@@ -23,6 +24,8 @@ class VimModule(decman.Module):
             'vundle',
         }
 
+
 decman.symlinks[f'{HOME}/.vimrc'] = f'{HOME}/dotfiles/vim/vimrc'
 decman.directories[f'{HOME}/.config/nvim'] = Directory(
-        source_directory=f'{HOME}/dotfiles/nvim', owner=USERNAME)
+    source_directory=f'{HOME}/dotfiles/nvim', owner=USERNAME
+)

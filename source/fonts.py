@@ -1,9 +1,10 @@
 import decman
 from decman import Directory
 
-from decman.plugins import pacman, aur, systemd
+from decman.plugins import pacman
 
 from common import HOME, USERNAME
+
 
 class FontsModule(decman.Module):
     def __init__(self):
@@ -26,5 +27,7 @@ class FontsModule(decman.Module):
             'woff2-font-awesome',
         }
 
+
 decman.directories[f'{HOME}/.fonts'] = Directory(
-        source_directory=f'{HOME}/dotfiles/fonts', owner=USERNAME)
+    source_directory=f'{HOME}/dotfiles/fonts', owner=USERNAME
+)

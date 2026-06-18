@@ -3,6 +3,7 @@ from decman.plugins import pacman
 
 from common import HOME
 
+
 class LatexTypstModule(decman.Module):
     def __init__(self):
         super().__init__('latex_typst')
@@ -38,5 +39,7 @@ class LatexTypstModule(decman.Module):
 
         return s
 
-decman.symlinks[f'{HOME}/.local/share/typst/packages/local'] = \
-        f'{HOME}/dotfiles/typst/local'
+
+decman.symlinks[f'{HOME}/.local/share/typst/packages/local'] = (
+    f'{HOME}/dotfiles/typst/local'
+)

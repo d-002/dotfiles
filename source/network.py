@@ -1,5 +1,6 @@
 import decman
-from decman.plugins import pacman, aur, systemd
+from decman.plugins import pacman, systemd
+
 
 class NetworkModule(decman.Module):
     def __init__(self):

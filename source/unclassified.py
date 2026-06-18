@@ -3,6 +3,7 @@ from decman.plugins import pacman, aur, systemd
 
 from common import HOME
 
+
 class UnclassifiedModule(decman.Module):
     def __init__(self):
         super().__init__('unclassified')
@@ -45,9 +46,11 @@ class UnclassifiedModule(decman.Module):
             'docker.socket',
         }
 
-decman.symlinks[f'{HOME}/.clang-format'] = \
-        f'{HOME}/dotfiles/unclassified/clang-format'
-decman.symlinks[f'{HOME}/.gitconfig'] = \
-        f'{HOME}/dotfiles/unclassified/gitconfig'
-decman.symlinks[f'{HOME}/.local/bin'] = \
-        f'{HOME}/dotfiles/unclassified/bin'
+
+decman.symlinks[f'{HOME}/.clang-format'] = (
+    f'{HOME}/dotfiles/unclassified/clang-format'
+)
+decman.symlinks[f'{HOME}/.gitconfig'] = (
+    f'{HOME}/dotfiles/unclassified/gitconfig'
+)
+decman.symlinks[f'{HOME}/.local/bin'] = f'{HOME}/dotfiles/unclassified/bin'

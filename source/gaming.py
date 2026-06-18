@@ -3,6 +3,7 @@ import decman
 import subprocess
 from decman.plugins import pacman, aur, systemd
 
+
 class GamingModule(decman.Module):
     def __init__(self):
         super().__init__('gaming')
@@ -15,17 +16,13 @@ class GamingModule(decman.Module):
             'mangohud',
             'gamemode',
             'wine',
-
             # x11 to avoid xwayland input lag
             'plasma-desktop',
             'plasma-x11-session',
-
             # steam
             'steam',
-
             # Minecraft
             'jdk21-openjdk',
-
             # Celeste
             'dotnet-sdk',
         }
@@ -39,15 +36,12 @@ class GamingModule(decman.Module):
             'rog-control-center',
             'envycontrol',
             'protonup-qt',
-
             # Celeste
-            'lua-lsqlite3', # broken, need to `makepkg -si --skipinteg`
+            'lua-lsqlite3',  # broken, need to `makepkg -si --skipinteg`
             'olympus',
             'rider',
-
             # TETR.IO
             'tetrio-desktop',
-
             # Subnautica
             'nitrox',
         }
@@ -71,7 +65,8 @@ class GamingModule(decman.Module):
 
         print(' - Setting mode to hybrid...')
         current_mode = subprocess.check_output(
-            ['envycontrol', '-q'], text=True).strip()
+            ['envycontrol', '-q'], text=True
+        ).strip()
         target_mode = 'hybrid'
         if current_mode == target_mode:
             print('Mode already set.')

@@ -1,6 +1,7 @@
 import decman
 from decman.plugins import pacman
 
+
 class VideoModule(decman.Module):
     def __init__(self):
         super().__init__('video')
@@ -14,14 +15,12 @@ class VideoModule(decman.Module):
             'lib32-vulkan-intel',
             'mesa',
             'vulkan-intel',
-
             # Nvidia dGPU
             'lib32-nvidia-utils',
             'nvidia-open',
             'nvidia-prime',
             'nvidia-settings',
             'nvidia-utils',
-
             # Utilities, tools
             'opencl-mesa',
             'opencl-nvidia',

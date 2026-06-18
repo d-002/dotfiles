@@ -1,7 +1,8 @@
 import decman
-from decman.plugins import pacman, aur, systemd
+from decman.plugins import pacman
 
 from common import HOME
+
 
 class TerminalAppsModule(decman.Module):
     def __init__(self):
@@ -25,6 +26,7 @@ class TerminalAppsModule(decman.Module):
             'tree',
             'zoxide',
         }
+
 
 decman.symlinks[f'{HOME}/.config/btop'] = f'{HOME}/dotfiles/terminal_apps/btop'
 decman.symlinks[f'{HOME}/.config/htop'] = f'{HOME}/dotfiles/terminal_apps/htop'

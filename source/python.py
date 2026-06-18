@@ -1,6 +1,7 @@
 import decman
-from decman.plugins import pacman, aur, systemd
+from decman.plugins import pacman, aur
 from common import HOME
+
 
 class PythonModule(decman.Module):
     def __init__(self):
@@ -45,5 +46,7 @@ class PythonModule(decman.Module):
             'python-sounddevice',
         }
 
-decman.symlinks[f'{HOME}/.ipython/profile_default/ipython_config.py'] = \
-        f'{HOME}/dotfiles/python/ipython_config.py'
+
+decman.symlinks[f'{HOME}/.ipython/profile_default/ipython_config.py'] = (
+    f'{HOME}/dotfiles/python/ipython_config.py'
+)

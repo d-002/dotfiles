@@ -1,6 +1,7 @@
 import decman
 from decman.plugins import aur
 
+
 class DaVinciResolveModule(decman.Module):
     def __init__(self):
         super().__init__('DaVinci Resolve')

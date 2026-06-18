@@ -1,6 +1,7 @@
 import decman
 from decman.plugins import pacman, aur
 
+
 class ProgrammingModule(decman.Module):
     def __init__(self):
         super().__init__('programming')

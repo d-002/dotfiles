@@ -1,5 +1,6 @@
 import decman
-from decman.plugins import pacman, aur, systemd
+from decman.plugins import pacman
+
 
 class X11Module(decman.Module):
     def __init__(self):

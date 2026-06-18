@@ -4,6 +4,7 @@ from decman.plugins import pacman, aur
 
 from common import HOME
 
+
 class MinimumViableModule(decman.Module):
     def __init__(self):
         super().__init__('minimum_viable')
@@ -32,7 +33,10 @@ class MinimumViableModule(decman.Module):
             'yay',
         }
 
-decman.files[f'/etc/pacman.conf'] = File(
-        source_file=f'{HOME}/dotfiles/pacman/pacman.conf')
-decman.files[f'/etc/makepkg.conf'] = File(
-        source_file=f'{HOME}/dotfiles/pacman/makepkg.conf')
+
+decman.files['/etc/pacman.conf'] = File(
+    source_file=f'{HOME}/dotfiles/pacman/pacman.conf'
+)
+decman.files['/etc/makepkg.conf'] = File(
+    source_file=f'{HOME}/dotfiles/pacman/makepkg.conf'
+)
