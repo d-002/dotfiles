@@ -18,3 +18,5 @@
 	editor = vim
 [push]
 	autoSetupRemote = true
+[rebase]
+	committerDateIsAuthorDate = true
