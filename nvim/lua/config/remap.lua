@@ -41,25 +41,12 @@ vim.keymap.set("n", "<leader>c", ":!clang-format -i %<cr><cr>")
 
 -- tabs
 vim.keymap.set("n", "<leader>t", vim.cmd.tabnew)
--- qwerty keybinds
-vim.keymap.set("n", "<C-1>", function() vim.cmd.tabn(1) end)
-vim.keymap.set("n", "<C-2>", function() vim.cmd.tabn(2) end)
-vim.keymap.set("n", "<C-3>", function() vim.cmd.tabn(3) end)
-vim.keymap.set("n", "<C-4>", function() vim.cmd.tabn(4) end)
-vim.keymap.set("n", "<C-5>", function() vim.cmd.tabn(5) end)
-vim.keymap.set("n", "<C-6>", function() vim.cmd.tabn(6) end)
-vim.keymap.set("n", "<C-7>", function() vim.cmd.tabn(7) end)
-vim.keymap.set("n", "<C-8>", function() vim.cmd.tabn(8) end)
-vim.keymap.set("n", "<C-9>", function() vim.cmd.tabn(9) end)
-vim.keymap.set("n", "<C-0>", function() vim.cmd.tabn(10) end)
--- azerty keybinds
-vim.keymap.set("n", "<C-&>", function() vim.cmd.tabn(1) end)
-vim.keymap.set("n", "<C-é>", function() vim.cmd.tabn(2) end)
-vim.keymap.set("n", "<C-\">", function() vim.cmd.tabn(3) end)
-vim.keymap.set("n", "<C-'>", function() vim.cmd.tabn(4) end)
-vim.keymap.set("n", "<C-(>", function() vim.cmd.tabn(5) end)
-vim.keymap.set("n", "<C-->", function() vim.cmd.tabn(6) end)
-vim.keymap.set("n", "<C-è>", function() vim.cmd.tabn(7) end)
-vim.keymap.set("n", "<C-_>", function() vim.cmd.tabn(8) end)
-vim.keymap.set("n", "<C-ç>", function() vim.cmd.tabn(9) end)
-vim.keymap.set("n", "<C-à>", function() vim.cmd.tabn(10) end)
+local all_keybinds = {
+    { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" },
+    { "&", "é", "\"", "'", "(", "-", "è", "_", "ç", "à" },
+};
+for _, keybinds in ipairs(all_keybinds) do
+    for i, key in ipairs(keybinds) do
+        vim.keymap.set("n", "<C-" .. key .. ">", function() vim.cmd.tabn(i) end)
+    end
+end
