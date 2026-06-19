@@ -1,6 +1,7 @@
 import os
 import decman
 import subprocess
+import shutil
 from decman.plugins import pacman, aur, systemd
 
 
@@ -73,3 +74,14 @@ class GamingModule(decman.Module):
         else:
             cp = subprocess.run(['envycontrol', '-s', target_mode])
             assert cp.returncode == 0
+
+        print('GamingModule: making sure nuhxboard is installed')
+        if shutil.which('nuhxboard') is None:
+            subprocess.run(
+                [
+                    'cargo',
+                    'install',
+                    '--git',
+                    'https://github.com/justDeeevin/NuhxBoard',
+                ]
+            )
