@@ -3,9 +3,16 @@ import decman
 from minimum_viable import MinimumViableModule
 from unclassified import UnclassifiedModule
 
+# IMPORTANT: add "as _" to prevent ruff from removing them
+import greeter as _
+import shell as _
+import system_root as _
+
 
 from audio import AudioModule
 from c import CModule
+
+# from davinci_resolve import DaVinciResolveModule
 from desktop_apps import DesktopAppsModule
 from fonts import FontsModule
 from gaming import GamingModule

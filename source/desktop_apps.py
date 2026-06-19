@@ -71,10 +71,10 @@ for name in names:
         f'{HOME}/dotfiles/desktop_apps/{name}'
     )
 
-decman.symlinks[f'{HOME}/.config/picom.conf'] = source_file = (
+decman.symlinks[f'{HOME}/.config/picom.conf'] = (
     f'{HOME}/dotfiles/desktop_apps/picom/picom.conf'
 )
-decman.symlinks[f'{HOME}/.config/vesktop/flags.conf'] = source_file = (
+decman.symlinks[f'{HOME}/.config/vesktop/flags.conf'] = (
     f'{HOME}/dotfiles/desktop_apps/vesktop/flags.conf'
 )
 decman.symlinks[f'{HOME}/Pictures/wallpaper.jpg'] = (
