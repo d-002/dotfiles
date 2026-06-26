@@ -14,12 +14,14 @@ return {
 
         local servers = {
             "clangd",        -- C, C++
-            "eslint",        -- Typescript
-            -- "lua_ls",     -- lua
+            "deno",          -- JavaScript
+            -- "eslint",     -- JavaScript, TypeScript
+            "lua_ls",        -- lua
             -- "phpactor",   -- PHP
             "pyright",       -- Python
             "rust_analyzer", -- Rust
             "texlab",        -- LaTeX
+            "ts_ls",         -- TypeScript
         }
 
         require("mason-lspconfig").setup({
