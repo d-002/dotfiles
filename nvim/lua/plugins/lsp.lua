@@ -14,7 +14,7 @@ return {
 
         local servers = {
             "clangd",        -- C, C++
-            "deno",          -- JavaScript
+            "denols",        -- JavaScript
             -- "eslint",     -- JavaScript, TypeScript
             "lua_ls",        -- lua
             -- "phpactor",   -- PHP
