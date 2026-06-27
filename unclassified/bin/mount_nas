@@ -5,6 +5,10 @@ read -p "Enter username: " username
 read -s -p "Enter password: " password
 echo
 
+if [ -z "$subpath" ]; then
+    echo "Aborting: empty subpath."
+    exit 1
+fi
 if [ -z "$username" ]; then
     echo "Aborting: empty username."
     exit 1
