@@ -12,6 +12,7 @@ class RemoteFSModule(decman.Module):
             'cifs-utils',
             'mtpfs',
             'nginx',
+            'samba',
             'sshfs',
             'openssh',
         }
