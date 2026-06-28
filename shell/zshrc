@@ -62,6 +62,7 @@ alias gl="git log --oneline"
 alias grl="git reflog"
 alias gr="git reset --soft HEAD^"
 alias gg="git log --graph --oneline --decorate --all"
+alias grb="git rebase --committer-date-is-author-date"
 
 export PATH="$HOME/.local/bin:$PATH"
 
