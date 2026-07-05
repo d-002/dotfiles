@@ -9,7 +9,6 @@ class X11Module(decman.Module):
     @pacman.packages
     def pacman_pkgs(self) -> set[str]:
         return {
-            'arandr',
             'feh',
             'i3-wm',
             'i3lock',

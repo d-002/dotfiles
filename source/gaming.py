@@ -18,8 +18,7 @@ class GamingModule(decman.Module):
             'gamemode',
             'wine',
             # x11 to avoid xwayland input lag
-            'plasma-desktop',
-            'plasma-x11-session',
+            'i3',
             # steam
             'steam',
             # Minecraft
