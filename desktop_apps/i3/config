@@ -12,7 +12,7 @@ set $right L
 
 ### Output configuration
 exec --no-startup-id feh --no-fehbg --bg-scale "$HOME/Pictures/wallpaper.jpg"
-exec xrandr --output HDMI-4 --mode 1920x1080 --rate 100
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal
 
 ### Key bindings
 bindsym $mod+Return exec $term
