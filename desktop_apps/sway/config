@@ -169,8 +169,8 @@ bar {
     swaybar_command waybar
 }
 
-client.focused #ffffff60 #ffffff50 #ffffff
-client.focused_inactive #ffffff40 #ffffff30 #ffffffc0
+client.focused #ffffff #ffffff50 #ffffff
+client.focused_inactive #ffffff50 #ffffff30 #ffffff
 client.focused_tab_title #ffffff40 #ffffff30 #ffffffc0
 client.unfocused #ffffff30 #ffffff20 #ffffff70
 
