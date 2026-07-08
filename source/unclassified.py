@@ -24,6 +24,7 @@ class UnclassifiedModule(decman.Module):
             'pacman-contrib',
             'perl-image-exiftool',
             'pre-commit',
+            'reflector',
             'rsync',
             'unzip',
             'zip',
@@ -44,6 +45,7 @@ class UnclassifiedModule(decman.Module):
             'containerd.service',
             'docker.service',
             'docker.socket',
+            'reflector.service',
         }
 
 
