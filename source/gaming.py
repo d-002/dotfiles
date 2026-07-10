@@ -18,7 +18,7 @@ class GamingModule(decman.Module):
             'gamemode',
             'wine',
             # x11 to avoid xwayland input lag
-            'i3',
+            'i3-wm',
             # steam
             'steam',
             # Minecraft
