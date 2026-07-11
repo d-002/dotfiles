@@ -51,7 +51,12 @@ class DesktopAppsModule(decman.Module):
         print('DesktopAppsModule: setting default browser')
 
         subprocess.run(
-            ['xdg-settingssetdefault-web-browserbrave-browser.desktop']
+            [
+                'xdg-settings',
+                'set',
+                'default-web-browser',
+                'brave-browser.desktop',
+            ]
         )
 
 
