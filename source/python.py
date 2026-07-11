@@ -32,6 +32,7 @@ class PythonModule(decman.Module):
             'python-soundfile',
             'python-typing_extensions',
             'ruff',
+            'uv',
             'uvicorn',
         }
 
