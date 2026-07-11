@@ -44,6 +44,8 @@ class GamingModule(decman.Module):
             'tetrio-desktop',
             # Subnautica
             'nitrox',
+            # Emulators
+            'mesen',
         }
 
     @systemd.units
