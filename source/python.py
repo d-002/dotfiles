@@ -11,6 +11,7 @@ class PythonModule(decman.Module):
     def pacman_pkgs(self) -> set[str]:
         return {
             'jupyter-notebook',
+            'mypy',
             'python-certifi',
             'python-colorama',
             'python-cvxpy',
