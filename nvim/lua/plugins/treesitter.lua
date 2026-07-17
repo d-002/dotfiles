@@ -1,7 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    version = "*",
-    run = ":TSUpdate",
+    branch = "main",
+    build = ":TSUpdate",
     setup = {
         -- A list of parser names, or "all" (the listed parsers MUST always be installed)
         ensure_installed = { "python", "c", "javascript", "markdown", "latex" },
