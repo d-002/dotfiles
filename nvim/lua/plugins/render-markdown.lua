@@ -1,5 +1,4 @@
 return {
---[[
     "MeanderingProgrammer/render-markdown.nvim",
     after = { "nvim-treesitter" },
     config = function()
@@ -7,5 +6,4 @@ return {
             yaml = { enabled = false },
         })
     end,
-]]--
 }
