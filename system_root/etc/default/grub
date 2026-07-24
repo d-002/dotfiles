@@ -61,3 +61,4 @@ GRUB_DISABLE_RECOVERY=true
 # functionality install os-prober and uncomment to detect and include other
 # operating systems.
 GRUB_DISABLE_OS_PROBER=false
+GRUB_OS_PROBER_SKIP_LIST="4bb5bc2c-9493-4d91-bc18-586dbe1811d2"
