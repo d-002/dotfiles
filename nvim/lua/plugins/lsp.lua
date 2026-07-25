@@ -14,6 +14,7 @@ return {
 
         local servers = {
             "clangd",        -- C, C++
+            "csharp_ls",     -- C#
             "denols",        -- JavaScript
             -- "eslint",     -- JavaScript, TypeScript
             "lua_ls",        -- lua
