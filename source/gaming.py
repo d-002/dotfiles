@@ -39,7 +39,6 @@ class GamingModule(decman.Module):
             # Celeste
             'lua-lsqlite3',  # broken, need to `makepkg -si --skipinteg`
             'olympus',
-            'rider',
             # TETR.IO
             'tetrio-desktop',
             # Subnautica
