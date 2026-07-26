@@ -17,8 +17,6 @@ class PythonModule(decman.Module):
             'python-pip',
             'python-pygame',
             'python-pyqt6',
-            'python-pytest',
-            'python-pytest-cov',
             'python-typing_extensions',
             'ruff',
             'uv',
