@@ -12,6 +12,7 @@ class UnclassifiedModule(decman.Module):
     def pacman_pkgs(self) -> set[str]:
         s = {
             'bc',
+            'bind',
             'brightnessctl',
             'clinfo',
             'docker',
