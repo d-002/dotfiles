@@ -45,6 +45,7 @@ class GamingModule(decman.Module):
             'nitrox',
             # Emulators
             'mesen',
+            'azahar',
         }
 
     @systemd.units
