@@ -36,9 +36,6 @@ vim.keymap.set("n", "q:", "<Nop>")
 -- ctrl c to escape
 vim.keymap.set("i", "<C-c>", "<Escape>")
 
--- clang-format
-vim.keymap.set("n", "<leader>c", ":!clang-format -i %<cr><cr>")
-
 -- tabs
 vim.keymap.set("n", "<leader>t", vim.cmd.tabnew)
 local all_keybinds = {
@@ -50,3 +47,6 @@ for _, keybinds in ipairs(all_keybinds) do
         vim.keymap.set("n", "<C-" .. key .. ">", function() vim.cmd.tabn(i) end)
     end
 end
+
+-- trailing spaces
+vim.keymap.set("n", "<leader>c", ":%s/\\s\\+$//g<Cr>")
