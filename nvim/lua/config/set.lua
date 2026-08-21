@@ -28,6 +28,7 @@ vim.o.shellcmdflag="-ic"
 
 vim.o.scrolloff = 5
 vim.o.colorcolumn = "80"
+vim.o.textwidth = 80
 
 vim.o.undofile = true
 
@@ -44,7 +45,6 @@ vim.o.list = true
 vim.cmd("packadd termdebug")
 
 -- netrw
-
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "netrw",
   callback = function()
