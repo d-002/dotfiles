@@ -26,9 +26,6 @@ class PythonModule(decman.Module):
     @aur.packages
     def aur_pkgs(self) -> set[str]:
         return {
-            'python-moderngl-window',
-            'python-py-cord-git',
-            'python-pyglm',
             'python-pynput',
             'python-sounddevice',
         }

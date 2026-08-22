@@ -21,9 +21,3 @@ class ProgrammingModule(decman.Module):
         }
 
         return s
-
-    @aur.packages
-    def aur_pkgs(self) -> set[str]:
-        return {
-            'manim',
-        }
