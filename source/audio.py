@@ -19,6 +19,7 @@ class AudioModule(decman.Module):
             'sof-firmware',
             'vlc',
             'vlc-plugin-ffmpeg',
+            'ffmpeg4.4',
             'vpl-gpu-rt',
             'wavpack',
         }
