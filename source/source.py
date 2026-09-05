@@ -12,7 +12,7 @@ import system_root as _
 from audio import AudioModule
 from c import CModule
 
-# from davinci_resolve import DaVinciResolveModule
+from davinci_resolve import DaVinciResolveModule
 from desktop_apps import DesktopAppsModule
 from fonts import FontsModule
 from gaming import GamingModule
@@ -42,7 +42,7 @@ decman.modules += [
     UnclassifiedModule(),
     AudioModule(),
     CModule(),
-    # DaVinciResolveModule(),
+    DaVinciResolveModule(),
     DesktopAppsModule(),
     FontsModule(),
     GamingModule(),

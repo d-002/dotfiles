@@ -9,14 +9,8 @@ class DaVinciResolveModule(decman.Module):
     @aur.packages
     def aur_pkgs(self) -> set[str]:
         return {
-            # tip: for large packages like qt5-location, qt5-webengine, use a
-            # prebuilt binary to avoid compiling 24k source files:
-            # e.g. https://mirror.cachyos.org/repo/x86_64/cachyos
-            'gtk2',
-            'libpng12',
-            'qt5-location',
-            'qt5-webchannel',
-            'qt5-webengine',
-            'qt5-websockets',
+            # tip: for large packages like qt5-location, qt5-webengine use a
+            # prebuild library e.g.
+            # https://mirror.cachyos.org/repo/x86_64/cachyos
             'davinci-resolve',
         }
