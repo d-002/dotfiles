@@ -16,6 +16,7 @@ class AudioModule(decman.Module):
             'pipewire-alsa',
             'pipewire-audio',
             'pipewire-pulse',
+            'rtkit',
             'sof-firmware',
             'vlc',
             'vlc-plugin-ffmpeg',
@@ -35,6 +36,7 @@ class AudioModule(decman.Module):
     def user_units(self) -> dict[str, set[str]]:
         return {
             'd_00': {
+                'rtkit-daemon.service',
                 'pipewire.service',
                 'wireplumber.service',
             },
