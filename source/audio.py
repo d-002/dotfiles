@@ -30,13 +30,13 @@ class AudioModule(decman.Module):
         return {
             'alsa-restore.service',
             'alsa-state.service',
+            'rtkit-daemon.service',
         }
 
     @systemd.user_units
     def user_units(self) -> dict[str, set[str]]:
         return {
             'd_00': {
-                'rtkit-daemon.service',
                 'pipewire.service',
                 'wireplumber.service',
             },
