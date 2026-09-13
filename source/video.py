@@ -1,5 +1,5 @@
 import decman
-from decman.plugins import pacman
+from decman.plugins import pacman, aur
 
 
 class VideoModule(decman.Module):
@@ -25,4 +25,11 @@ class VideoModule(decman.Module):
             'opencl-mesa',
             'opencl-nvidia',
             'vulkan-tools',
+        }
+
+    @aur.packages
+    def aur_pkgs(self) -> set[str]:
+        return {
+            'obs-vkcapture',
+            'lib32-obs-vkcapture',
         }
