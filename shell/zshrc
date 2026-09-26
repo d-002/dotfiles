@@ -52,6 +52,7 @@ alias fix-opera='sudo ~root/.scripts/fix-opera.sh' # Opera fix HTML5 media
 alias gs="git status"
 alias gd="git diff"
 alias ga="git add --all"
+alias gA="git add"
 alias gc="git commit -S -m "
 alias gac="ga ; gc"
 alias gcm="git commit --amend"
@@ -63,6 +64,8 @@ alias grl="git reflog"
 alias gr="git reset --soft HEAD^"
 alias gg="git log --graph --oneline --decorate --all"
 alias grb="git rebase --committer-date-is-author-date"
+alias gk="git checkout"
+alias gw="git switch"
 
 export PATH="$HOME/.local/bin:$PATH"
 
