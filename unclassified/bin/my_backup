@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ ! -e /mnt/nas ]; then
+    echo "Error: please mount nas first"
+    exit 1
+fi
+
 rsync -av --delete --delete-excluded --progress "$HOME/Documents/Programming/" "/mnt/nas/Sauvegardes/PC/Documents/Programming" --exclude-from "$HOME/.local/bin/.backup_rsync_ignore"
 rsync -av --delete --delete-excluded --progress "$HOME/testing/" "/mnt/nas/Sauvegardes/PC/testing" --exclude-from "$HOME/.local/bin/.backup_rsync_ignore"
 
