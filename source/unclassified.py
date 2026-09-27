@@ -17,7 +17,6 @@ class UnclassifiedModule(decman.Module):
             'clinfo',
             'docker',
             'docker-compose',
-            'eza',
             'fd',
             'git',
             'man-db',

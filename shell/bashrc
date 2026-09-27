@@ -41,7 +41,6 @@ color()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
 
 # other utils
 eval "$(zoxide init posix --hook prompt)"
-alias ls=eza
 alias cd=z
 alias rm="rm -I"
 alias 223="echo '   223'"

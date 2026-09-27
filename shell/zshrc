@@ -41,7 +41,6 @@ function mk() {
 
 # other utils
 eval "$(zoxide init zsh)"
-alias ls=eza
 alias cd=z
 alias rm="rm -I"
 alias 223="echo '   223'"
