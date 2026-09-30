@@ -50,3 +50,7 @@ end
 
 -- trailing spaces
 vim.keymap.set("n", "<leader>c", ":%s/\\s\\+$//g<Cr>")
+
+-- multiple files
+vim.keymap.set("n", "<C-n>", ":next<CR>")
+vim.keymap.set("n", "<C-p>", ":prev<CR>")
