@@ -26,7 +26,7 @@ function mkcd() {
 }
 alias sd0="shutdown 0"
 
-EDITOR=vim
+EDITOR=nvim
 
 # c EPITA
 function mk() {
