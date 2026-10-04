@@ -15,7 +15,7 @@ PS1='[bash] \W$ '
 # common aliases
 alias vim=nvim
 alias py=python3
-alias l="ls -Al"
+alias l="ls -Alh"
 alias icat="kitten icat" # kitty
 alias mnt="sudo mount -o uid=1000,gid=1000,umask=022"
 function mkcd() {
