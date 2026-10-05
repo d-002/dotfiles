@@ -187,3 +187,7 @@ input type:keyboard {
 
 include /etc/sway/config.d/*
 #include config-onescreen
+
+smart_borders on
+default_border pixel 1
+gaps inner 1
