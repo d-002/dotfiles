@@ -28,6 +28,7 @@ class DesktopAppsModule(decman.Module):
             'nwg-hello',
             'obs-studio',
             'rofi',
+            'torbrowser-launcher',
             'thunderbird',
             'zathura',
             'zathura-pdf-mupdf',
