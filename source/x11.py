@@ -13,7 +13,6 @@ class X11Module(decman.Module):
             'i3-wm',
             'i3lock',
             'maim',
-            'openbox',
             'picom',
             'polybar',
             'xdg-utils',
