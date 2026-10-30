@@ -22,6 +22,7 @@ class UnclassifiedModule(decman.Module):
             'git',
             'man-db',
             'man-pages',
+            'most',
             'pacman-contrib',
             'perl-image-exiftool',
             'pre-commit',
