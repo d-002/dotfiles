@@ -2,7 +2,7 @@ import decman
 from decman import Directory
 from decman.plugins import pacman, aur
 
-from common import HOME, USERNAME
+from common import HOMES, USERNAMES
 
 
 class VimModule(decman.Module):
@@ -25,7 +25,8 @@ class VimModule(decman.Module):
         }
 
 
-decman.symlinks[f'{HOME}/.vimrc'] = f'{HOME}/dotfiles/vim/vimrc'
-decman.directories[f'{HOME}/.config/nvim'] = Directory(
-    source_directory=f'{HOME}/dotfiles/nvim', owner=USERNAME
-)
+for home, username in zip(HOMES, USERNAMES):
+    decman.symlinks[f'{home}/.vimrc'] = f'{home}/dotfiles/vim/vimrc'
+    decman.directories[f'{home}/.config/nvim'] = Directory(
+        source_directory=f'{home}/dotfiles/nvim', owner=username
+    )

@@ -3,7 +3,7 @@ from decman import Directory
 
 from decman.plugins import pacman
 
-from common import HOME, USERNAME
+from common import HOMES, USERNAMES
 
 
 class FontsModule(decman.Module):
@@ -28,6 +28,7 @@ class FontsModule(decman.Module):
         }
 
 
-decman.directories[f'{HOME}/.fonts'] = Directory(
-    source_directory=f'{HOME}/dotfiles/fonts', owner=USERNAME
-)
+for home, username in zip(HOMES, USERNAMES):
+    decman.directories[f'{home}/.fonts'] = Directory(
+        source_directory=f'{home}/dotfiles/fonts', owner=username
+    )

@@ -1,4 +1,5 @@
 import decman
+from common import USERNAMES
 from decman.plugins import pacman, systemd
 
 
@@ -36,9 +37,9 @@ class AudioModule(decman.Module):
 
     @systemd.user_units
     def user_units(self) -> dict[str, set[str]]:
-        return {
-            'd_00': {
-                'pipewire.service',
-                'wireplumber.service',
-            },
+        values = {
+            'pipewire.service',
+            'wireplumber.service',
         }
+
+        return {username: values for username in USERNAMES}
