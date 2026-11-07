@@ -14,7 +14,6 @@ class TerminalAppsModule(decman.Module):
             'btop',
             'fastfetch',
             'fzf',
-            'github-cli',
             'htop',
             'inxi',
             'lsof',

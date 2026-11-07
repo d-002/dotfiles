@@ -15,7 +15,6 @@ class DesktopAppsModule(decman.Module):
         return {
             'audacity',
             'baobab',
-            'dmenu',
             'filezilla',
             'firefox',
             'gimp',
