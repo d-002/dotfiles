@@ -1,7 +1,7 @@
 import decman
 from decman.plugins import pacman, aur, systemd
 
-from common import HOME
+from common import HOMES
 
 
 class UnclassifiedModule(decman.Module):
@@ -51,10 +51,11 @@ class UnclassifiedModule(decman.Module):
         }
 
 
-decman.symlinks[f'{HOME}/.clang-format'] = (
-    f'{HOME}/dotfiles/unclassified/clang-format'
-)
-decman.symlinks[f'{HOME}/.gitconfig'] = (
-    f'{HOME}/dotfiles/unclassified/gitconfig'
-)
-decman.symlinks[f'{HOME}/.local/bin'] = f'{HOME}/dotfiles/unclassified/bin'
+for home in HOMES:
+    decman.symlinks[f'{home}/.clang-format'] = (
+        f'{home}/dotfiles/unclassified/clang-format'
+    )
+    decman.symlinks[f'{home}/.gitconfig'] = (
+        f'{home}/dotfiles/unclassified/gitconfig'
+    )
+    decman.symlinks[f'{home}/.local/bin'] = f'{home}/dotfiles/unclassified/bin'

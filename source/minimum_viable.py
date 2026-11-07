@@ -2,7 +2,7 @@ import decman
 from decman import File
 from decman.plugins import pacman, aur
 
-from common import HOME
+from common import HOMES
 
 
 class MinimumViableModule(decman.Module):
@@ -34,9 +34,10 @@ class MinimumViableModule(decman.Module):
         }
 
 
-decman.files['/etc/pacman.conf'] = File(
-    source_file=f'{HOME}/dotfiles/pacman/pacman.conf'
-)
-decman.files['/etc/makepkg.conf'] = File(
-    source_file=f'{HOME}/dotfiles/pacman/makepkg.conf'
-)
+for home in HOMES:
+    decman.files['/etc/pacman.conf'] = File(
+        source_file=f'{home}/dotfiles/pacman/pacman.conf'
+    )
+    decman.files['/etc/makepkg.conf'] = File(
+        source_file=f'{home}/dotfiles/pacman/makepkg.conf'
+    )

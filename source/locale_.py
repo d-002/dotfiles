@@ -1,7 +1,7 @@
 import decman
 from decman.plugins import systemd
 
-from common import HOME
+from common import HOMES
 
 
 class LocaleModule(decman.Module):
@@ -15,6 +15,9 @@ class LocaleModule(decman.Module):
         }
 
 
-decman.symlinks['/etc/locale.conf'] = f'{HOME}/dotfiles/locale/locale.conf'
-decman.symlinks['/etc/locale.gen'] = f'{HOME}/dotfiles/locale/locale.gen'
-decman.symlinks['/etc/vconsole.conf'] = f'{HOME}/dotfiles/locale/vconsole.conf'
+for home in HOMES:
+    decman.symlinks['/etc/locale.conf'] = f'{home}/dotfiles/locale/locale.conf'
+    decman.symlinks['/etc/locale.gen'] = f'{home}/dotfiles/locale/locale.gen'
+    decman.symlinks['/etc/vconsole.conf'] = (
+        f'{home}/dotfiles/locale/vconsole.conf'
+    )

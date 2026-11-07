@@ -1,6 +1,7 @@
 import decman
 
-from common import HOME
+from common import HOMES
 
-decman.symlinks[f'{HOME}/.bashrc'] = f'{HOME}/dotfiles/shell/bashrc'
-decman.symlinks[f'{HOME}/.zshrc'] = f'{HOME}/dotfiles/shell/zshrc'
+for home in HOMES:
+    decman.symlinks[f'{home}/.bashrc'] = f'{home}/dotfiles/shell/bashrc'
+    decman.symlinks[f'{home}/.zshrc'] = f'{home}/dotfiles/shell/zshrc'

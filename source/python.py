@@ -1,6 +1,6 @@
 import decman
 from decman.plugins import pacman, aur
-from common import HOME
+from common import HOMES
 
 
 class PythonModule(decman.Module):
@@ -31,6 +31,7 @@ class PythonModule(decman.Module):
         }
 
 
-decman.symlinks[f'{HOME}/.ipython/profile_default/ipython_config.py'] = (
-    f'{HOME}/dotfiles/python/ipython_config.py'
-)
+for home in HOMES:
+    decman.symlinks[f'{home}/.ipython/profile_default/ipython_config.py'] = (
+        f'{home}/dotfiles/python/ipython_config.py'
+    )

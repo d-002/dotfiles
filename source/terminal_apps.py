@@ -1,7 +1,7 @@
 import decman
 from decman.plugins import pacman
 
-from common import HOME
+from common import HOMES
 
 
 class TerminalAppsModule(decman.Module):
@@ -28,5 +28,10 @@ class TerminalAppsModule(decman.Module):
         }
 
 
-decman.symlinks[f'{HOME}/.config/btop'] = f'{HOME}/dotfiles/terminal_apps/btop'
-decman.symlinks[f'{HOME}/.config/htop'] = f'{HOME}/dotfiles/terminal_apps/htop'
+for home in HOMES:
+    decman.symlinks[f'{home}/.config/btop'] = (
+        f'{home}/dotfiles/terminal_apps/btop'
+    )
+    decman.symlinks[f'{home}/.config/htop'] = (
+        f'{home}/dotfiles/terminal_apps/htop'
+    )
