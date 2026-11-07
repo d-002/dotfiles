@@ -18,4 +18,3 @@ class LocaleModule(decman.Module):
 decman.symlinks['/etc/locale.conf'] = f'{HOME}/dotfiles/locale/locale.conf'
 decman.symlinks['/etc/locale.gen'] = f'{HOME}/dotfiles/locale/locale.gen'
 decman.symlinks['/etc/vconsole.conf'] = f'{HOME}/dotfiles/locale/vconsole.conf'
-decman.symlinks['/etc/hostname'] = f'{HOME}/dotfiles/locale/hostname'
