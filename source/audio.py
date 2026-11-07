@@ -24,7 +24,6 @@ class AudioModule(decman.Module):
             'ffmpeg4.4',
             'vpl-gpu-rt',
             'wavpack',
-            'yt-dlp',
         }
 
     @systemd.units

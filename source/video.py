@@ -16,20 +16,13 @@ class VideoModule(decman.Module):
             'mesa',
             'vulkan-intel',
             # Nvidia dGPU
-            'lib32-nvidia-utils',
-            'nvidia-open',
-            'nvidia-prime',
-            'nvidia-settings',
-            'nvidia-utils',
+            #'lib32-nvidia-utils',
+            #'nvidia-open',
+            #'nvidia-prime',
+            #'nvidia-settings',
+            #'nvidia-utils',
             # Utilities, tools
-            'opencl-mesa',
-            'opencl-nvidia',
-            'vulkan-tools',
-        }
-
-    @aur.packages
-    def aur_pkgs(self) -> set[str]:
-        return {
-            'obs-vkcapture',
-            'lib32-obs-vkcapture',
+            #'opencl-mesa',
+            #'opencl-nvidia',
+            #'vulkan-tools',
         }

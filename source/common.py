@@ -1,2 +1,2 @@
-USERNAMES = ['d_00']
+USERNAMES = ['leo']
 HOMES = [f'/home/{username}' for username in USERNAMES]

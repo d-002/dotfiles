@@ -10,7 +10,6 @@ class LibsDriversModule(decman.Module):
     def pacman_pkgs(self) -> set[str]:
         return {
             'a52dec',
-            'cuda',
             'dosfstools',
             'intel-media-driver',
             'intel-ucode',

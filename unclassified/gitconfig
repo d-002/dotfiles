@@ -1,7 +1,6 @@
 [user]
 	email = mailofd00@gmail.com
 	name = d-002
-	signingkey = 3E6EEF00F3DA7F9BB716EFAFF323198FA134D7CF
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
@@ -12,8 +11,6 @@
 	directory = /mnt/win
 [init]
 	defaultBranch = master
-[commit]
-	gpgsign = true
 [core]
 	editor = nvim
 [push]

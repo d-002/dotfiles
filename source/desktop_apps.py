@@ -20,12 +20,10 @@ class DesktopAppsModule(decman.Module):
             'gimp',
             'greetd',
             'kitty',
-            'libreoffice-fresh',
             'loupe',
             'mission-center',
             'nemo',
             'nwg-hello',
-            'obs-studio',
             'rofi',
             'torbrowser-launcher',
             'thunderbird',
@@ -37,8 +35,6 @@ class DesktopAppsModule(decman.Module):
     def aur_pkgs(self) -> set[str]:
         return {
             'brave-bin',
-            'chromium-widevine',
-            'vesktop',
         }
 
     @systemd.units
@@ -81,9 +77,6 @@ for home in HOMES:
     decman.symlinks[f'{home}/.config/picom.conf'] = (
         f'{home}/dotfiles/desktop_apps/picom/picom.conf'
     )
-    decman.symlinks[f'{home}/.config/vesktop/flags.conf'] = (
-        f'{home}/dotfiles/desktop_apps/vesktop/flags.conf'
-    )
     decman.symlinks[f'{home}/Pictures/wallpaper.jpg'] = (
         f'{home}/dotfiles/desktop_apps/wallpaper.jpg'
     )
@@ -93,10 +86,3 @@ for home in HOMES:
         decman.files[f'/etc/sway/{name}'] = File(
             source_file=f'{home}/dotfiles/desktop_apps/sway_root/{name}'
         )
-
-    decman.symlinks['/etc/chromium/default'] = (
-        f'{home}/dotfiles/desktop_apps/chromium_root/default'
-    )
-    decman.symlinks['/etc/opera/default.pacsave'] = (
-        f'{home}/dotfiles/desktop_apps/opera_root/default.pacsave'
-    )

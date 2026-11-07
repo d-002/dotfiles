@@ -10,22 +10,16 @@ import system_root as _
 
 
 from audio import AudioModule
-from c import CModule
 
-from davinci_resolve import DaVinciResolveModule
 from desktop_apps import DesktopAppsModule
 from fonts import FontsModule
 from gaming import GamingModule
-from latex_typst import LatexTypstModule
 from libs_drivers import LibsDriversModule
 from locale_ import LocaleModule
 from network import NetworkModule
-from python import PythonModule
-from programming import ProgrammingModule
 from remote_fs import RemoteFSModule
 from terminal_apps import TerminalAppsModule
 from video import VideoModule
-from vim import VimModule
 from wayland import WaylandModule
 from x11 import X11Module
 
@@ -41,21 +35,15 @@ decman.modules += [
     MinimumViableModule(),
     UnclassifiedModule(),
     AudioModule(),
-    CModule(),
-    DaVinciResolveModule(),
     DesktopAppsModule(),
     FontsModule(),
     GamingModule(),
-    LatexTypstModule(),
     LibsDriversModule(),
     LocaleModule(),
     NetworkModule(),
-    PythonModule(),
-    ProgrammingModule(),
     RemoteFSModule(),
     TerminalAppsModule(),
     VideoModule(),
-    VimModule(),
     WaylandModule(),
     X11Module(),
 ]
@@ -72,4 +60,5 @@ if __name__ == '__main__':
         except AttributeError:
             pass
 
+    print(packages)
     subprocess.run(['yay', '-Syu', *packages])
