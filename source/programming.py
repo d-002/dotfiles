@@ -12,6 +12,7 @@ class ProgrammingModule(decman.Module):
             'bun',
             'luarocks',
             'npm',
+            'gcc-fortran',
             'php',
             'php-sqlite',
             'pnpm',
