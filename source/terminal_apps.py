@@ -19,6 +19,7 @@ class TerminalAppsModule(decman.Module):
             'inxi',
             'lsof',
             'lynx',
+            'most',
             'openbsd-netcat',
             'ripgrep',
             's-tui',
