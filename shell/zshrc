@@ -18,7 +18,7 @@ alias vim=nvim
 alias py=python3
 alias l="ls -Alh"
 alias icat="kitten icat" # kitty
-alias cacheclear="sudo paccache -rk0; rm -rf ~/.cache/yay/*"
+alias cacheclear="sudo paccache -rk0; rm -rf ~/.cache/yay"
 alias mnt="sudo mount -o uid=1000,gid=1000,umask=022"
 function mkcd() {
     mkdir -p "$@"
