@@ -10,9 +10,10 @@ class ProgrammingModule(decman.Module):
     def pacman_pkgs(self) -> set[str]:
         s = {
             'bun',
+            'clang',
+            'gcc-fortran',
             'luarocks',
             'npm',
-            'gcc-fortran',
             'php',
             'php-sqlite',
             'pnpm',
