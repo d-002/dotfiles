@@ -44,7 +44,7 @@ class GamingModule(decman.Module):
             # Emulators
             'mesen',
             'azahar',
-            'eden',
+            'eden-bin',
         }
 
     @systemd.units
