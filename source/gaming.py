@@ -44,8 +44,9 @@ class GamingModule(decman.Module):
             # Emulators
             'mesen',
             'azahar',
-            #'eden-bin',
+            'eden-bin',
             'citron-neo',
+            'cubeb', # for some reason this is not set as dependency of citron
         }
 
     @systemd.units
